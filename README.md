@@ -1,4 +1,4 @@
-![logo](../Projet/assets/img/logo.png)
+![logo](./assets/img/logo.png)
 # Projet Papaya
 Le projet Papaya est une parodie d'Apple où tous les produits proposés par ces derniers voient leur pomme remplacée par une papaye.
 ## Pourquoi ce projet ?
