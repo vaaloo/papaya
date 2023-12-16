@@ -1,0 +1,57 @@
+.header {
+    background: linear-gradient(90deg, rgba(42,7,48,1) 21%, rgba(55,8,60,1) 53%, rgba(80,12,71,1) 100%);
+}
+
+.header h1 {
+    color: #fff;
+}
+
+.header nav ul li a {
+    color: #fff;
+}
+
+.header nav ul li a::after {
+    background: #fff;
+}
+
+.wave-container {
+    background: url("../img/header-dark.jpg") no-repeat center/cover;
+}
+
+.wave-container path {
+    fill: black;
+}
+
+.main {
+    background: black;
+    color: white;
+}
+
+.article:first-child {
+    color: white;
+    background: #0a0a0a url("../img/home/papayaphone1pro.png") no-repeat center/cover;
+}
+
+.article:nth-child(2) {
+    background: #0a0a0a url("../img/home/papayaphone1.png") no-repeat center/cover;
+}
+
+.article:nth-child(3) {
+    background: #0a0a0a url("../img/home/papayabookpro.png") no-repeat center/cover;
+}
+
+.article:nth-child(4) {
+    background: #0a0a0a url("../img/home/papayawatch.png") no-repeat center/cover;
+}
+
+.article:nth-child(5) {
+    background: #0a0a0a url("../img/home/papayapods.png") no-repeat bottom/cover;
+}
+
+video {
+    border: 1px solid white;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(42,7,48,1) 21%, rgba(55,8,60,1) 53%, rgba(80,12,71,1) 100%);
+}
