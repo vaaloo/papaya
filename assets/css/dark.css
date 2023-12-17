@@ -52,6 +52,32 @@ video {
     border: 1px solid white;
 }
 
+.form-container {
+    background-color: #282828;
+    background: rgb(64, 11, 67);
+    box-shadow: 0 0 10px rgb(235, 72, 53);
+}
+
+.form-container label {
+    color: #c8c8c8;
+}
+
+.form-container input {
+    background: rgb(42, 18, 41);
+    border: 1px solid rgb(22, 10, 22);
+    color: #333;
+}
+
+.form-container textarea {
+    background: rgb(42, 18, 41);
+    border: 1px solid rgb(22, 10, 22);
+}
+
+.form-container button {
+    background: rgb(235, 72, 53);
+    color: #ccc;
+}
+
 footer {
     background: linear-gradient(90deg, rgba(42,7,48,1) 21%, rgba(55,8,60,1) 53%, rgba(80,12,71,1) 100%);
 }
