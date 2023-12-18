@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const darkModeToggle = document.getElementById("darkModeToggle");
+    const darkModeToggle = document.getElementById("darkModeToggleOne");
+    const darkModeToggleTwo = document.getElementById("darkModeToggleTwo");
     const body = document.body;
 
     function toggleDarkMode() {
@@ -18,10 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
         link.href = stylesheetPath;
 
         darkModeToggle.src = iconPath;
+        darkModeToggleTwo.src = iconPath;
     }
     const savedDarkMode = localStorage.getItem("darkMode") === "true";
     if (savedDarkMode) {
         toggleDarkMode();
     }
     darkModeToggle.addEventListener("click", toggleDarkMode);
+    darkModeToggleTwo.addEventListener("click", toggleDarkMode);
 });

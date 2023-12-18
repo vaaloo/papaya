@@ -26,7 +26,7 @@ body {
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 2px 15px #000;
-    z-index: 999;
+    z-index: 998;
     transition: .3s
 }
 
@@ -141,4 +141,70 @@ footer {
     flex-flow: row wrap;
     box-shadow: 0 2px 15px #000;
     z-index: 999;
+}
+
+#burger {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header nav {
+        display: none;
+    }
+    #darkModeToggleOne {
+        display: none;
+    }
+    #burger {
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+    .header img, .header a {
+        z-index: 999;
+    }
+}
+
+.navbar-burger {
+    z-index: 998;
+    background: linear-gradient(90deg, rgba(197,47,30,1) 21%, rgba(225,103,44,1) 53%, rgba(237,134,51,1) 100%);
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: -500px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    box-shadow: 0 15px 15px -15px #000;
+}
+
+.navbar-burger.show {
+    transform: translateY(640px);
+}
+
+.navbar-burger.show.sticky {
+    transform: translateY(580px);
+}
+
+.navbar-burger nav ul {
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    height: 70px;
+}
+
+.navbar-burger nav {
+    display: block;
+}
+
+.navbar-burger.show #darkModeToggle {
+    display: block;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-burger.show {
+        transform: translateY(-500px);
+    }
 }
