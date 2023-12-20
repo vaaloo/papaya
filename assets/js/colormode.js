@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let stylesheetPath;
         let iconPath;
 
-        if (window.location.pathname.includes("index")) {
+        if (window.location.pathname.includes("index") || window.location.pathname === "/") {
             stylesheetPath = isDarkMode ? "./assets/css/dark.css" : "./assets/css/light.css";
             iconPath = isDarkMode ? "./assets/img/light-mode.png" : "./assets/img/night-mode.png";
-        } else if (window.location.pathname.includes("contact")) {
+        } else if (window.location.pathname.includes("contact") || window.location.pathname === "/contact") {
             stylesheetPath = isDarkMode ? "../assets/css/dark.css" : "../assets/css/light.css";
             iconPath = isDarkMode ? "../assets/img/light-mode.png" : "../assets/img/night-mode.png";
         }
