@@ -7,28 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
         body.classList.toggle("dark-mode");
         const isDarkMode = body.classList.contains("dark-mode");
         localStorage.setItem("darkMode", isDarkMode);
-        let stylesheetPath;
-        let iconPath;
-
-        if (window.location.pathname.includes("index") || window.location.pathname === "/") {
-            stylesheetPath = isDarkMode ? "./assets/css/dark.css" : "./assets/css/light.css";
-            iconPath = isDarkMode ? "./assets/img/light-mode.png" : "./assets/img/night-mode.png";
-        } else if (window.location.pathname.includes("contact") || window.location.pathname === "/contact") {
-            stylesheetPath = isDarkMode ? "../assets/css/dark.css" : "../assets/css/light.css";
-            iconPath = isDarkMode ? "../assets/img/light-mode.png" : "../assets/img/night-mode.png";
-        }
 
         let link = document.getElementById("darkModeStylesheet");
-        if (!link) {
-            link = document.createElement("link");
-            link.id = "darkModeStylesheet";
-            link.rel = "stylesheet";
-            document.head.appendChild(link);
+        if (link.href.includes("dark")) {
+            link.href = link.href.replace("dark", "light");
+            darkModeToggle.src = darkModeToggle.src.replace("light-mode.png", "night-mode.png");
+            darkModeToggleTwo.src = darkModeToggleTwo.src.replace("light-mode.png", "night-mode.png");
+        } else if (link.href.includes("light")) {
+            link.href = link.href.replace("light", "dark");
+            darkModeToggle.src = darkModeToggle.src.replace("night-mode.png", "light-mode.png");
+            darkModeToggleTwo.src = darkModeToggleTwo.src.replace("night-mode.png", "light-mode.png");
+        } else {
+            throw new Error("Unknown stylesheet", link.href);
         }
-        link.href = stylesheetPath;
-
-        darkModeToggle.src = iconPath;
-        darkModeToggleTwo.src = iconPath;
     }
 
     const savedDarkMode = localStorage.getItem("darkMode") === "true";
