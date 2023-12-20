@@ -65,12 +65,13 @@ video {
 .form-container input {
     background: rgb(52, 52, 52);
     border: 1px solid rgb(29, 29, 29);
-    color: #333;
+    color: white
 }
 
 .form-container textarea {
     background: rgb(52, 52, 52);
     border: 1px solid rgb(22, 10, 22);
+    color: white;
 }
 
 .form-container button {
