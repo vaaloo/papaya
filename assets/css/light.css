@@ -44,7 +44,7 @@
 }
 
 .article:nth-child(4) {
-    background: rgb(245, 245, 247) url("../img/home/papayawatch.png") no-repeat center/cover;
+    background: #f5f5f7 url("../img/home/papayawatch.png") no-repeat center/cover;
 }
 
 .article:nth-child(5) {
@@ -82,4 +82,10 @@
 
 footer {
     background: linear-gradient(90deg, rgba(197,47,30,1) 21%, rgba(225,103,44,1) 53%, rgba(237,134,51,1) 100%);
+}
+
+@media only screen and (max-width: 600px) {
+    .article:first-child {
+        background: rgb(245, 245, 247) url("../img/home/papayaphone1promobile.png") no-repeat center/cover;
+    }
 }

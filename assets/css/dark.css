@@ -86,3 +86,9 @@ video {
 footer {
     background: linear-gradient(90deg, rgba(42,7,48,1) 21%, rgba(55,8,60,1) 53%, rgba(80,12,71,1) 100%);
 }
+
+@media only screen and (max-width: 600px) {
+    .article:first-child {
+        background: #0a0a0a url("../img/home/papayaphone1promobile.png") no-repeat center/cover;
+    }
+}
