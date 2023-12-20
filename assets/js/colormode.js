@@ -7,8 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
         body.classList.toggle("dark-mode");
         const isDarkMode = body.classList.contains("dark-mode");
         localStorage.setItem("darkMode", isDarkMode);
-        const stylesheetPath = isDarkMode ? "../assets/css/dark.css" : "../assets/css/light.css";
-        const iconPath = isDarkMode ? "../assets/img/light-mode.png" : "../assets/img/night-mode.png";
+        let stylesheetPath;
+        let iconPath;
+
+        if (window.location.pathname.includes("index")) {
+            stylesheetPath = isDarkMode ? "./assets/css/dark.css" : "./assets/css/light.css";
+            iconPath = isDarkMode ? "./assets/img/light-mode.png" : "./assets/img/night-mode.png";
+        } else if (window.location.pathname.includes("contact")) {
+            stylesheetPath = isDarkMode ? "../assets/css/dark.css" : "../assets/css/light.css";
+            iconPath = isDarkMode ? "../assets/img/light-mode.png" : "../assets/img/night-mode.png";
+        }
+
         let link = document.getElementById("darkModeStylesheet");
         if (!link) {
             link = document.createElement("link");
@@ -21,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         darkModeToggle.src = iconPath;
         darkModeToggleTwo.src = iconPath;
     }
+
     const savedDarkMode = localStorage.getItem("darkMode") === "true";
     if (savedDarkMode) {
         toggleDarkMode();
